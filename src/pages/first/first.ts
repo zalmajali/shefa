@@ -35,7 +35,7 @@ export class FirstPage {
                     if (this.translate.getBrowserLang() == "en")
                     setTimeout(() => {this.navCtrl.setRoot("HomeenPage");}, 3500);
                     else
-                      setTimeout(() => {this.navCtrl.setRoot("HomePage");}, 3500);
+                      this.navCtrl.setRoot("HomePage");
                 }
             }
         });
