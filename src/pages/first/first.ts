@@ -26,15 +26,15 @@ export class FirstPage {
         this.storage.get('selectedLang').then(langUse => {
             if (langUse != null && langUse != undefined && langUse != "") {
                 if(langUse == "en")
-                  setTimeout(() => {this.navCtrl.setRoot("HomeenPage");}, 3500);
+                  setTimeout(() => {this.navCtrl.setRoot("HomeenPage");}, 5000);
                 else
-                setTimeout(() => {this.navCtrl.setRoot("HomePage");}, 3500);
+                setTimeout(() => {this.navCtrl.setRoot("HomePage");}, 5000);
             } else {
                 if (this.translate.getBrowserLang() !== undefined) {
                     if (this.translate.getBrowserLang() == "en")
-                    setTimeout(() => {this.navCtrl.setRoot("HomeenPage");}, 3500);
+                    setTimeout(() => {this.navCtrl.setRoot("HomeenPage");}, 5000);
                     else
-                      setTimeout(() => {this.navCtrl.setRoot("HomePage");}, 3500);
+                      setTimeout(() => {this.navCtrl.setRoot("HomePage");}, 5000);
                 }
             }
         });
