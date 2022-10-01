@@ -34,7 +34,7 @@ export class HomePage {
  ngOnInit() {
    alert("asdasdasdasd")
       imageMapResize();
-    }
+   }
   ionViewDidLoad() {
     imageMapResize();
   }
