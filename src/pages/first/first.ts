@@ -30,8 +30,8 @@ export class FirstPage {
                 else
                 setTimeout(() => {this.navCtrl.setRoot("HomePage");}, 3500);
             } else {
-              alert(this.translate.getBrowserLang());
                 if (this.translate.getBrowserLang() !== undefined) {
+                   alert(this.translate.getBrowserLang());
                     if (this.translate.getBrowserLang() == "en")
                     setTimeout(() => {this.navCtrl.setRoot("HomeenPage");}, 3500);
                     else
