@@ -31,7 +31,10 @@ export class HomePage {
     }, err => {
     });
   }
-
+ ngOnInit() {
+   alert("asdasdasdasd")
+      imageMapResize();
+    }
   ionViewDidLoad() {
     imageMapResize();
   }
