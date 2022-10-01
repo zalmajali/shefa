@@ -29,8 +29,7 @@ export class MyApp {
     this.initializeApp();
     this.changeManueLang();
   }
-  async changeManueLang(lang:any = 0){
-    alert(lang)
+  changeManueLang(lang:any = 0){
     if(lang!=0){
       if(lang=="2"){
         this.langUse = "en";
@@ -153,8 +152,7 @@ export class MyApp {
         );
       }
     }else{
-      await this.storage.get('selectedLang').then(async langUse=>{
-        alert(langUse+" rr33331233333333")
+      this.storage.get('selectedLang').then(langUse=>{
         if(langUse!=null && langUse!=undefined && langUse!=""){
           if(langUse=="en"){
             this.langUse = "en";
