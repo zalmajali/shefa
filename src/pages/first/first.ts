@@ -31,11 +31,10 @@ export class FirstPage {
                 setTimeout(() => {this.navCtrl.setRoot("HomePage");}, 3500);
             } else {
                 if (this.translate.getBrowserLang() !== undefined) {
-                   alert(this.translate.getBrowserLang()+" ererereer");
                     if (this.translate.getBrowserLang() == "en")
                     setTimeout(() => {this.navCtrl.setRoot("HomeenPage");}, 3500);
                     else
-                      this.navCtrl.setRoot("HomePage");
+                      setTimeout(() => {this.navCtrl.setRoot("HomePage");}, 3500);
                 }
             }
         });
