@@ -22,16 +22,42 @@ export class HomePage {
   lang:any;
   langNew:any;
   constructor(public translate:TranslateService,private storage: Storage,private platform: Platform,private localNotifications: LocalNotifications,public navCtrl: NavController,private media: Media) {
- this.localNotifications.on('click').subscribe(notification => {
-      if(notification.text !=undefined)
-        this.navCtrl.setRoot("ShowmaqolaPage",{"maqola":notification.text});
-      else{
-        this.navCtrl.setRoot("ShowmaqolaPage",{"maqola":"مفتاحُ الحياة الطيبة: حُسْن العمل، وحُسْن الظن بالله."});
-      }
-    }, err => {
-    });
+    
   }
- ngOnInit() {
-   alert("asdasdasdasd")
-   }
+  ionViewDidLoad() {
+    imageMapResize();
+  }
+  goToFavoritesPage(){
+    this.navCtrl.setRoot("FavoritesPage");
+  }
+  goToLibraryPage(){
+    this.navCtrl.setRoot("LibraryPage");
+  }
+  goToConsultationPage(){
+    this.navCtrl.setRoot("ConsultationPage");
+  }
+  goToGeneralroquiaPage(){
+    this.navCtrl.setRoot("GeneralroquiaPage");
+  }
+  goToScientificissuesPage(){
+    this.navCtrl.setRoot("ScientificissuesPage");
+  }
+  goToQuestionandanswerPage(){
+    this.navCtrl.setRoot("QuestionandanswerPage");
+  }
+  goToRoquiatalmasPage(){
+    this.navCtrl.setRoot("RoquiatalmasPage");
+  }
+  goToRoquiatalseherPage(){
+    this.navCtrl.setRoot("RoquiatalseherPage");
+  }
+  goToRoquiatalayenPage(){
+    this.navCtrl.setRoot("RoquiatalayenPage");
+  }
+  goToWerdalroquiaPage(){
+    this.navCtrl.setRoot("WerdalroquiaPage");
+  }
+  goToRoquiatalmareadPage(){
+    this.navCtrl.setRoot("RoquiatalmareadPage");
+  }
 }
