@@ -30,6 +30,7 @@ export class MyApp {
     this.changeManueLang();
   }
   changeManueLang(lang:any = 0){
+    alert(lang)
     if(lang!=0){
       if(lang=="2"){
         this.langUse = "en";
