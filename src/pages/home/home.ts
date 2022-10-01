@@ -22,7 +22,14 @@ export class HomePage {
   lang:any;
   langNew:any;
   constructor(public translate:TranslateService,private storage: Storage,private platform: Platform,private localNotifications: LocalNotifications,public navCtrl: NavController,private media: Media) {
- 
+ this.localNotifications.on('click').subscribe(notification => {
+      if(notification.text !=undefined)
+        this.navCtrl.setRoot("ShowmaqolaPage",{"maqola":notification.text});
+      else{
+        this.navCtrl.setRoot("ShowmaqolaPage",{"maqola":"مفتاحُ الحياة الطيبة: حُسْن العمل، وحُسْن الظن بالله."});
+      }
+    }, err => {
+    });
   }
  ngOnInit() {
    alert("asdasdasdasd")
